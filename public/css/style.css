@@ -1,0 +1,19 @@
+body
+{
+    background-color: rgb(228, 238, 223);
+    background-image: url("1.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100%;
+}
+.navbar
+{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.navbar-inverse
+{
+    background-color: rgb(252, 167, 8);
+    color: black;
+}

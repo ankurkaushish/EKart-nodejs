@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul.list-group
+        each product,i in products
+            li.list-group-item
+                a(href="/products/"+product._id)=product.product_name
+                br 
+                br
+                form(method='POST' , action ="/productminus/"+product._id)
+                 if product.product_quantity 
+                  input.form-control(name='quantity',type='number' placeholder="Enter the Quantity")
+                 else
+                  h5 OUT OF STOCK 
+                 br
+                 if product.product_quantity 
+                  input.btn.btn-primary(type='submit',value='Add to Cart')
+            

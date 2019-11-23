@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 Cart
+    //var total= "hello" 
+    ul
+     each arrays , i in cartpro
+      form(action="/deleteproduct/"+arrays.product_name  method="POST")
+       li
+        h4 Product Name:- #{arrays.product_name}
+        h4 Product Quantity:- #{arrays.product_quantity}
+        h4 Product Price:- #{arrays.product_price}
+        
+        input.btn.btn-danger(type='submit',value='Delete')
+        hr
+    br
+    //h1=total
+    form(action="/clearcart" method="POST")
+     input.btn.btn-primary(type='submit',value='Checkout')
+        
